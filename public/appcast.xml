@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>ScrollDock Changelog</title>
+        <description>Updates to ScrollDock.</description>
+        <language>en</language>
+        <!-- release.sh inserts each new release's <item> directly below this line — don't remove it. -->
+        <!--SPARKLE_ITEMS_MARKER-->
+    </channel>
+</rss>
