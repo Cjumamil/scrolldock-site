@@ -1,8 +1,36 @@
-import { DOWNLOAD_URL } from '../constants'
+import { useEffect, useState } from 'react'
+import { DOWNLOAD_URL, GITHUB_LATEST_RELEASE_URL } from '../constants'
 import AppleLogo from './AppleLogo'
 import DemoPanel from './DemoPanel'
 
 export default function Hero() {
+  const [sizeMB, setSizeMB] = useState<string | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    const fileName = DOWNLOAD_URL.split('/').pop()
+
+    fetch(GITHUB_LATEST_RELEASE_URL)
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch latest release')
+        return res.json()
+      })
+      .then((data) => {
+        if (cancelled) return
+        const asset = Array.isArray(data?.assets)
+          ? data.assets.find((a: { name?: string }) => a?.name === fileName)
+          : undefined
+        if (asset && typeof asset.size === 'number') {
+          setSizeMB((asset.size / (1024 * 1024)).toFixed(1))
+        }
+      })
+      .catch(() => {})
+
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
   return (
     <section className="relative overflow-hidden px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-24">
       <div
@@ -37,7 +65,7 @@ export default function Hero() {
         </div>
 
         <p className="mt-5 text-[13px] text-ink-tertiary sm:mt-6">
-          Free Early Access · macOS 13 or later · 2 MB
+          Free Early Access · macOS 13 or later{sizeMB ? ` · ${sizeMB} MB` : ''}
         </p>
 
         <section className="mt-16">
