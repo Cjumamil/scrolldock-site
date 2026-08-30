@@ -1,1 +1,1 @@
-export const DOWNLOAD_URL = 'https://github.com/cooperjumamil/ScrollDock/releases/latest/download/ScrollDock.zip'
+export const DOWNLOAD_URL = 'https://github.com/Cjumamil/scrolldock-site/releases/latest/download/ScrollDock.dmg'
