@@ -28,12 +28,12 @@ export default function DemoPanel() {
 
   return (
     <div>
-      <p className="mb-4 flex items-center justify-center gap-1.5 text-center text-[13px] text-ink-tertiary">
+      <p className="mb-4 flex items-center justify-center gap-1.5 text-center text-[16px] text-ink-tertiary">
         <MousePointerClick className="h-3.5 w-3.5" strokeWidth={2} />
-        Interactive Demo Below — Follow the hints.
+        Interactive Demo Below
       </p>
 
-      <div className="mx-auto w-full max-w-5xl overflow-hidden rounded-2xl bg-gradient-to-br from-blue to-teal shadow-[0_25px_60px_-15px_rgba(0,113,227,0.35)]">
+      <div className="mx-auto w-auto max-w-5xl overflow-hidden rounded-4xl bg-gradient-to-br from-blue to-teal shadow-[0_25px_60px_-15px_rgba(0,113,227,0.35)]">
         <MenuBar
           naturalScroll={naturalScroll}
           onToggleNaturalScroll={handleToggleNaturalScroll}

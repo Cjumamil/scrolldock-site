@@ -13,6 +13,17 @@
       name="description"
       content="ScrollDock switches your Mac's scroll direction the instant you dock or undock."
     />
+    <script>
+      (function () {
+        var redirect = sessionStorage.redirectPath
+        if (redirect) {
+          delete sessionStorage.redirectPath
+          if (redirect !== location.pathname) {
+            history.replaceState(null, '', redirect)
+          }
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

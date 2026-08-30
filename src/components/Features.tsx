@@ -3,7 +3,6 @@ import {
   ToggleRight,
   Zap,
   RefreshCw,
-  LayoutPanelTop,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -15,7 +14,7 @@ const FEATURES: { title: string; body: string; icon: LucideIcon }[] = [
   },
   {
     title: 'Switch manually, anytime',
-    body: 'Prefer to flip it yourself? One click in the menu bar overrides auto-detection instantly.',
+    body: 'Prefer to flip it yourself? One click in the app\'s menu bar overrides auto-detection instantly — no Dock icon, no window to manage.',
     icon: ToggleRight,
   },
   {
@@ -28,30 +27,40 @@ const FEATURES: { title: string; body: string; icon: LucideIcon }[] = [
     body: "Change it by hand in System Settings and ScrollDock remembers — it never fights you.",
     icon: RefreshCw,
   },
-  {
-    title: 'Lives in the menu bar',
-    body: 'No Dock icon, no window to manage, launches at login if you want it to.',
-    icon: LayoutPanelTop,
-  },
 ]
 
 export default function Features() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
-      <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-blue sm:text-4xl">
-        Features
-      </h2>
+    <section className="bg-surface">
+      <svg width="0" height="0" className="absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="feature-icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="var(--color-blue)" />
+            <stop offset="100%" stopColor="var(--color-teal)" />
+          </linearGradient>
+        </defs>
+      </svg>
 
-      <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-        {FEATURES.map((feature) => (
-          <div key={feature.title}>
-            <feature.icon className="mb-4 h-12 w-12 text-ink" strokeWidth={2} />
-            <h3 className="text-[17px] font-bold text-ink">{feature.title}</h3>
-            <p className="mt-2 text-[15px] leading-relaxed text-ink-secondary">
-              {feature.body}
-            </p>
-          </div>
-        ))}
+      <div className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
+        <h2 className="mb-12 text-center text-4xl font-bold tracking-tight text-blue sm:mb-16 sm:text-[2.75rem]">
+          Features
+        </h2>
+
+        <div className="flex gap-x-4 sm:gap-x-8">
+          {FEATURES.map((feature) => (
+            <div key={feature.title} className="min-w-0 basis-1/4">
+              <feature.icon
+                className="mb-3 h-8 w-8 sm:mb-5 sm:h-14 sm:w-14"
+                strokeWidth={2}
+                color="url(#feature-icon-gradient)"
+              />
+              <h3 className="text-[14px] font-bold text-ink sm:text-[18px] lg:text-[21px]">{feature.title}</h3>
+              <p className="mt-2 text-[12px] leading-relaxed text-ink-secondary sm:mt-3 sm:text-[16px] lg:text-[18px]">
+                {feature.body}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
