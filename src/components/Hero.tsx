@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:mt-12">
           <a
             href={DOWNLOAD_URL}
-            className="inline-flex items-center gap-2 rounded-full bg-blue px-6 py-3 text-[15px] font-medium text-white transition-colors hover:bg-blue-hover sm:px-8 sm:py-4 sm:text-base"
+            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue via-teal to-blue bg-[length:200%_100%] px-6 py-3 text-[15px] font-medium text-white transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-blue/30 hover:animate-gradient-flow sm:px-8 sm:py-4 sm:text-base"
           >
             <AppleLogo className="h-4 w-4" />
             Download for Mac

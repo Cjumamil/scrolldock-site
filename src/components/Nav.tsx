@@ -73,7 +73,7 @@ export default function Nav() {
           </a>
           <a
             href={DOWNLOAD_URL}
-            className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-white transition-colors hover:bg-ink/85"
+            className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-gradient-to-r hover:from-ink hover:via-blue hover:to-ink hover:bg-[length:200%_100%] hover:shadow-lg hover:shadow-ink/20 hover:animate-gradient-flow"
           >
             <AppleLogo className="h-3 w-3" />
             Download
