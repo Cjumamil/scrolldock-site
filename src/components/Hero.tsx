@@ -18,7 +18,7 @@ export default function Hero() {
 
         <p className="mx-auto mt-3 max-w-md text-sm text-ink-tertiary sm:mt-4 sm:text-base">
           No more digging through System Settings to flip Natural Scrolling by
-          hand, every time.
+          hand, every time you dock and undock.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10">
@@ -32,12 +32,12 @@ export default function Hero() {
         </div>
 
         <p className="mt-4 text-[13px] text-ink-tertiary sm:mt-5">
-          Free · macOS 13 or later · 2 MB
+          Free Early Access · macOS 13 or later · 2 MB
         </p>
-      </div>
-
-      <div className="mt-8 sm:mt-10">
-        <DemoPanel />
+     
+        <section className="mt-12">
+        <DemoPanel/>
+        </section>
       </div>
     </section>
   )
