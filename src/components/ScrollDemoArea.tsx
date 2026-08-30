@@ -8,7 +8,7 @@ type ScrollDemoAreaProps = {
 const PARAGRAPHS = [
   "Natural scrolling flips the old rule: content moves with your fingers instead of away from them. Apple borrowed the idea from iOS, where swiping up moved the page up — because that's just how touchscreens work.",
   "Trackpads inherited that logic instantly. Mice didn't. A scroll wheel has no glass to drag your finger across, so plenty of people flip it straight back to the classic direction the moment they plug one in.",
-  "That's the entire reason ScrollDock exists — nobody wants to dig through System Settings every time they dock or undock. One direction for the trackpad, another for the mouse, switched automatically.",
+  "That's the entire reason ScrollDock exists — nobody wants to dig through System Settings every time they dock or undock. Plug in an external display and your scroll direction flips system-wide, automatically — trackpad, mouse, whatever you're using in the moment.",
   "Go ahead, toggle the switch above and scroll this box with your trackpad or mouse wheel. You'll feel the difference in about half a second.",
   "Clamshell mode complicates the picture further — close the laptop lid with an external display attached and macOS keeps running headless, no built-in screen involved at all. ScrollDock still catches that transition, because it watches for display changes, not just the lid switch.",
   "Prefer to flip it yourself? One click on the menu bar icon — the same mouse glyph sitting up there — overrides whatever ScrollDock just decided automatically, and it remembers your choice until the next dock or undock.",

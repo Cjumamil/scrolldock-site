@@ -7,6 +7,14 @@
         <!-- release.sh inserts each new release's <item> directly below this line — don't remove it. -->
         <!--SPARKLE_ITEMS_MARKER-->
         <item>
+            <title>ScrollDock 1.1.0</title>
+            <sparkle:version>1.1.0</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <pubDate>Sun, 30 Aug 2026 05:33:55 +0000</pubDate>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/Cjumamil/scrolldock-site/releases/download/v1.1.0/ScrollDock.zip" length="4063305" type="application/octet-stream" sparkle:edSignature="O1jtOKVxwNgw+/dEdEzL3oWjdDOZnVt1Y2NPU9tAO4UVKD3hKkpkGUxvqXh+7/Y4CVjuDNn5/GoyRTGGwEqZAw==" />
+        </item>
+        <item>
             <title>ScrollDock 1.0.0</title>
             <sparkle:version>1.0.0</sparkle:version>
             <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
