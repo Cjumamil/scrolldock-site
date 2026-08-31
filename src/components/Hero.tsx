@@ -21,7 +21,7 @@ export default function Hero() {
           ? data.assets.find((a: { name?: string }) => a?.name === fileName)
           : undefined
         if (asset && typeof asset.size === 'number') {
-          setSizeMB((asset.size / (1024 * 1024)).toFixed(1))
+          setSizeMB((asset.size / (1000 * 1000)).toFixed(1))
         }
       })
       .catch(() => {})
