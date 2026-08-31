@@ -44,7 +44,7 @@ export default function Hero() {
           <span className="block text-blue">every time.</span>
         </h1>
 
-        <p className="mx-auto mt-7 max-w-xl text-xl text-ink-secondary sm:mt-10 sm:text-2xl">
+        <p className="mx-auto mt-4 max-w-xl text-xl text-ink-secondary sm:mt-8 sm:text-2xl">
           ScrollDock switches your Mac's scroll direction the instant you dock
           or undock.
         </p>
@@ -68,7 +68,7 @@ export default function Hero() {
           Free Early Access · macOS 13 or later{sizeMB ? ` · ${sizeMB} MB` : ''}
         </p>
 
-        <section className="mt-16">
+        <section className="mt-8">
           <DemoPanel />
         </section>
       </div>
