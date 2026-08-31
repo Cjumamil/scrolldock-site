@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { GITHUB_RELEASES_URL } from '../constants'
+import { navigate } from '../lib/router'
 
 type Release = {
   id: number
@@ -51,13 +52,39 @@ export default function Changelog() {
     }
   }, [])
 
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    navigate('/')
+  }
+
   return (
     <section className="mx-auto max-w-2xl px-6 py-20">
-      <h1 className="text-4xl font-bold tracking-tight text-ink sm:text-5xl">
+      <a
+        href="/"
+        onClick={handleBackClick}
+        className="inline-flex items-center gap-1.5 text-[13px] font-medium text-ink-secondary transition-colors hover:text-ink"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          className="h-4 w-4"
+          aria-hidden="true"
+        >
+          <path
+            fillRule="evenodd"
+            d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
+            clipRule="evenodd"
+          />
+        </svg>
+        Back
+      </a>
+
+      <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl">
         Changelog
       </h1>
       <p className="mt-4 text-lg text-ink-secondary">
-        Every ScrollDock release, straight from GitHub.
+        Stay up to date with every ScrollDock release.
       </p>
 
       {state === 'loading' && (

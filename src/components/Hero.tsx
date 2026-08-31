@@ -32,7 +32,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden px-6 pt-24 pb-20 text-center sm:pt-32 sm:pb-24">
+    <section className="relative overflow-hidden px-6 pt-20 pb-20 text-center sm:pt-30 sm:pb-24">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 mx-auto h-[420px] w-[720px] max-w-[120%] rounded-full bg-gradient-to-br from-blue/25 to-teal/25 blur-[100px]"
