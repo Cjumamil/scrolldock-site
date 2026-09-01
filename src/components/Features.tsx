@@ -46,16 +46,16 @@ export default function Features() {
           Features
         </h2>
 
-        <div className="flex gap-x-4 sm:gap-x-8">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 sm:gap-x-8 sm:gap-y-0">
           {FEATURES.map((feature) => (
-            <div key={feature.title} className="min-w-0 basis-1/4">
+            <div key={feature.title} className="min-w-0">
               <feature.icon
                 className="mb-3 h-8 w-8 sm:mb-5 sm:h-14 sm:w-14"
                 strokeWidth={2}
                 color="url(#feature-icon-gradient)"
               />
-              <h3 className="text-[14px] font-bold text-ink sm:text-[18px] lg:text-[21px]">{feature.title}</h3>
-              <p className="mt-2 text-[12px] leading-relaxed text-ink-secondary sm:mt-3 sm:text-[16px] lg:text-[18px]">
+              <h3 className="text-[15px] font-bold text-ink sm:text-[18px] lg:text-[21px]">{feature.title}</h3>
+              <p className="mt-2 text-[13px] leading-relaxed text-ink-secondary sm:mt-3 sm:text-[16px] lg:text-[18px]">
                 {feature.body}
               </p>
             </div>

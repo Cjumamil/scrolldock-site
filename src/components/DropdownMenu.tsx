@@ -32,7 +32,7 @@ export default function DropdownMenu({
   return (
     <div
       role="menu"
-      className="absolute right-0 top-full z-30 mt-1.5 w-64 overflow-hidden rounded-lg border border-white/10 bg-[#2c2c2e]/95 py-1 text-white shadow-2xl backdrop-blur-xl"
+      className="absolute right-0 top-full z-30 mt-1.5 w-64 max-w-[calc(100vw-3rem)] overflow-hidden rounded-lg border border-white/10 bg-[#2c2c2e]/95 py-1 text-white shadow-2xl backdrop-blur-xl"
     >
       <div className="cursor-default px-3 py-1.5 text-[12px] text-white/40">
         Docked (external display)

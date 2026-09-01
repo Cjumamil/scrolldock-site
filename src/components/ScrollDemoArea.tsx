@@ -54,7 +54,7 @@ export default function ScrollDemoArea({
   }, [naturalScroll])
 
   return (
-    <div className="rounded-b-2xl bg-black/10 px-8 pb-8 pt-6">
+    <div className="rounded-b-2xl bg-black/10 px-4 pb-4 pt-6 sm:px-8 sm:pb-8">
       <p className="mb-4 text-center text-[13px] text-white/70">
         Try scrolling here — then toggle the switch above.
       </p>
@@ -78,7 +78,7 @@ export default function ScrollDemoArea({
 
         <div
           ref={containerRef}
-          className="h-96 space-y-5 overflow-y-auto rounded-xl bg-white/10 p-8 text-[15px] leading-relaxed text-white/90 backdrop-blur-sm"
+          className="h-72 space-y-5 overflow-y-auto rounded-xl bg-white/10 p-5 text-[14px] leading-relaxed text-white/90 backdrop-blur-sm sm:h-96 sm:p-8 sm:text-[15px]"
         >
           {PARAGRAPHS.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>

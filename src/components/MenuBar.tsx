@@ -52,16 +52,16 @@ export default function MenuBar({
   return (
     <div
       ref={containerRef}
-      className="relative z-20 flex h-10 items-center justify-between rounded-t-2xl bg-black/20 px-4 backdrop-blur-md"
+      className="relative z-20 flex h-10 items-center justify-between rounded-t-2xl bg-black/20 px-3 backdrop-blur-md sm:px-4"
     >
       <div
         aria-hidden="true"
         className="absolute left-1/2 top-0 h-[26px] w-[160px] -translate-x-1/2 rounded-b-xl bg-black"
       />
 
-      <AppleLogo className="h-4 w-4 text-white" />
+      <AppleLogo className="h-4 w-4 shrink-0 text-white" />
 
-      <div className="flex items-center gap-3 text-white/80">
+      <div className="relative flex items-center gap-2 text-white/80 sm:gap-3">
         <div className="relative">
           <button
             type="button"
@@ -82,37 +82,37 @@ export default function MenuBar({
 
           <div
             aria-hidden="true"
-            className={`pointer-events-none absolute right-0 top-full z-20 mt-1.5 transition-all duration-300 ${
+            className={`pointer-events-none absolute left-1/2 top-full z-20 mt-1.5 -translate-x-1/2 transition-all duration-300 ${
               showMenuHint
                 ? 'translate-y-0 opacity-100'
                 : '-translate-y-1.5 opacity-0'
             }`}
           >
             <span
-              className={`inline-block w-max rounded-full bg-ink/80 px-3.5 py-1.5 text-[12px] font-medium text-white backdrop-blur-sm ${
+              className={`inline-block w-max max-w-[70vw] rounded-full bg-ink/80 px-3.5 py-1.5 text-center text-[11px] font-medium text-white backdrop-blur-sm sm:text-[12px] ${
                 showMenuHint ? 'animate-hint-invite' : ''
               }`}
             >
               Click here to open the menu ↑
             </span>
           </div>
-
-          {open && (
-            <DropdownMenu
-              naturalScroll={naturalScroll}
-              onToggleNaturalScroll={onToggleNaturalScroll}
-              onboardingStep={onboardingStep}
-            />
-          )}
         </div>
 
         {SYSTEM_ICONS.map((Icon, index) => (
-          <Icon key={index} className="h-4 w-4" strokeWidth={2} />
+          <Icon key={index} className="h-4 w-4 shrink-0" strokeWidth={2} />
         ))}
 
-        <span className="text-[13px] font-medium tabular-nums text-white/90">
+        <span className="shrink-0 text-[13px] font-medium tabular-nums text-white/90">
           {CLOCK_TIME}
         </span>
+
+        {open && (
+          <DropdownMenu
+            naturalScroll={naturalScroll}
+            onToggleNaturalScroll={onToggleNaturalScroll}
+            onboardingStep={onboardingStep}
+          />
+        )}
       </div>
     </div>
   )
