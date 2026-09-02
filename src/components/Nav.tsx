@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { DOWNLOAD_URL, GITHUB_LATEST_RELEASE_URL } from '../constants'
+import { FaDiscord } from 'react-icons/fa'
+import { DISCORD_INVITE_URL, DOWNLOAD_URL, GITHUB_LATEST_RELEASE_URL } from '../constants'
 import AppleLogo from './AppleLogo'
 import { navigate } from '../lib/router'
 
@@ -63,13 +64,23 @@ export default function Nav() {
           )}
         </a>
 
-        <div className="flex items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-3 sm:gap-6">
           <a
             href="/changelog"
             onClick={handleChangelogClick}
             className="text-[12px] font-medium text-ink-secondary transition-colors hover:text-ink sm:text-[13px]"
           >
             Changelog
+          </a>
+          <a
+            href={DISCORD_INVITE_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Join the Discord"
+            title="Join the Discord"
+            className="text-ink-tertiary transition-colors hover:text-[#5865F2]"
+          >
+            <FaDiscord size={20} />
           </a>
           <a
             href={DOWNLOAD_URL}
